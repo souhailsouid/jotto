@@ -1,8 +1,6 @@
 import {storeFactory} from '../test/testUtils'
 import {guessWord} from './actions'
 
-
-
 describe('guessWord action dispatcher', () => {
     const secretWord = 'party'
     const unsuccessfullGuess = 'train'
@@ -15,7 +13,6 @@ describe('guessWord action dispatcher', () => {
         test('updates state correctly for unsuccessfull guess', () => {
             store.dispatch(guessWord(unsuccessfullGuess))
             const newState = store.getState()
-            console.log(newState)
             const expectedState = {
                 ...initialState,
                 success: false,
