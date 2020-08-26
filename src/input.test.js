@@ -87,4 +87,8 @@ describe(' Guess word action creator call, ', () => {
         const guessWordArg = guessWordMock.mock.calls[0][0]
         expect(guessWordArg).toBe(guessedWord)
     })
+    test('clear input after submit', () => {
+        const clearInput = wrapper.state(('currentGuess'))
+        expect(clearInput).toBe('')
+    })
 })
